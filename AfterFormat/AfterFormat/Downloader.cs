@@ -92,7 +92,7 @@ namespace AfterFormat
 
         public void FileDownload()
         {
-            using (webClient = new WebClient())
+            //using (webClient = new WebClient())
             {
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
@@ -104,6 +104,9 @@ namespace AfterFormat
                 try
                 {
                     webClient.DownloadFileAsync(URL, downloadLocation);
+                    isCancelled = false;
+                    isDownloading = true;
+                    isFinished = false;
                 }
                 catch (Exception ex)
                 {
@@ -114,17 +117,17 @@ namespace AfterFormat
 
         private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            downloadSpeed = string.Format("{0} kb/s", (e.BytesReceived / 1024d / sw.Elapsed.TotalSeconds).ToString("0.00"));
+            if (isDownloading)
+            {
+                downloadSpeed = string.Format("{0} kb/s", (e.BytesReceived / 1024d / sw.Elapsed.TotalSeconds).ToString("0.00"));
 
-            downloadPercentage = e.ProgressPercentage.ToString();
+                downloadPercentage = e.ProgressPercentage.ToString();
 
-            downloadedFromTotal = string.Format("{0} MB's / {1} MB's",
-                (e.BytesReceived / 1024d / 1024d).ToString("0.00"),
-                (e.TotalBytesToReceive / 1024d / 1024d).ToString("0.00"));
+                downloadedFromTotal = string.Format("{0} MB's / {1} MB's",
+                    (e.BytesReceived / 1024d / 1024d).ToString("0.00"),
+                    (e.TotalBytesToReceive / 1024d / 1024d).ToString("0.00"));
+            }
 
-            isCancelled = false;
-            isDownloading = true;
-            isFinished = false;
         }
 
         private void Completed(object sender, AsyncCompletedEventArgs e)

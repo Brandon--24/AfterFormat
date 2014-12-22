@@ -30,7 +30,7 @@ namespace AfterFormat
 
         string downLoc = @"C:\";
         string customSilentInstallPath = @"D:\Applications\";
-        bool useSilentInstall = true;
+        bool useSilentInstall = false;
         bool useCustomInstallPath = false;
 
         private void frmAFBasic_Load(object sender, EventArgs e)
@@ -160,20 +160,23 @@ namespace AfterFormat
         private void btnInstall_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            string appName = btn.Tag.ToString().Split(':')[0];
-            string loc = btn.Tag.ToString().Substring(appName.Length + 1);
+            ApplicationInfo app = new ApplicationInfo();
+            app = (ApplicationInfo)btn.Tag;
+            string appName = app.Name;
+            string fileName = app.GetFileName();
+            string loc = downLoc;
 
             if (useSilentInstall && useCustomInstallPath)
             {
-                Process.Start(loc, "/S /D=" + customSilentInstallPath);
+                Process.Start(loc + fileName, "/S /D=" + customSilentInstallPath);
             }
             else if (useSilentInstall)
             {
-                Process.Start(loc, "/S");
+                Process.Start(loc + fileName, "/S");
             }
             else
             {
-                Process.Start(loc);
+                Process.Start(loc + fileName);
             }
         }
 
@@ -191,7 +194,7 @@ namespace AfterFormat
                 bool downExists = false;
                 foreach (Downloader dl in dlList)
                 {
-                    if (app.Name == dl.DownloadName) //if it already exists, start it
+                    if (appName == dl.DownloadName) //if it already exists, start it
                     {
                         downExists = true;
                         dl.FileDownload();
@@ -202,7 +205,7 @@ namespace AfterFormat
                         }
                     }
                 }
-                if (!downExists) //if it doesn't, create new and start it
+                if (!downExists) //if it doesn't exist, create new one and start it
                 {
                     Downloader dl = new Downloader(appName, downLink, downLoc + fileName);
                     dlList.Add(dl);
@@ -256,6 +259,10 @@ namespace AfterFormat
                 c = cs[0];
                 Button btnResumeStop = (Button)c;
 
+                cs = pnlThis.Controls.Find("btnInstall" + appName, true);
+                c = cs[0];
+                Button btnInstall = (Button)c;
+
                 labelSpeed.Text = dl.DownloadSpeed;
 
                 // Update the progressbar percentage only when the value is not the same.
@@ -279,18 +286,17 @@ namespace AfterFormat
                     //    t.Stop();
                     //}
                     //dls.Remove(d);
-                    break;
                 }
                 else if (dl.IsFinished)
                 {
                     btnResumeStop.Text = "Download";
                     btnResumeStop.Enabled = false;
+                    btnInstall.Visible = true;
                     //if (dls.Count == 1)
                     //{
                     //    t.Stop();
                     //}
                     //dls.Remove(d);
-                    break;
                 }
             }
         }
