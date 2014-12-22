@@ -226,6 +226,11 @@ namespace AfterFormat
             }
         }
         
+        public string GetFileName()
+        {
+            return downloadLink.Substring(downloadLink.LastIndexOf('/') + 1);
+        }
+
         #endregion
     }
 }

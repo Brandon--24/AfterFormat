@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbVIsuals = new System.Windows.Forms.TabPage();
@@ -51,8 +52,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tbApplications = new System.Windows.Forms.TabPage();
+            this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flpApplications = new System.Windows.Forms.FlowLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
@@ -63,8 +66,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.flpApplications = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tbVIsuals.SuspendLayout();
             this.pnlVisual.SuspendLayout();
@@ -354,6 +356,15 @@
             this.tbApplications.Text = "Applications";
             this.tbApplications.UseVisualStyleBackColor = true;
             // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(6, 138);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(100, 60);
+            this.button9.TabIndex = 5;
+            this.button9.Text = "Recommended";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(6, 72);
@@ -372,6 +383,13 @@
             this.panel1.Size = new System.Drawing.Size(434, 271);
             this.panel1.TabIndex = 4;
             // 
+            // flpApplications
+            // 
+            this.flpApplications.Location = new System.Drawing.Point(3, 3);
+            this.flpApplications.Name = "flpApplications";
+            this.flpApplications.Size = new System.Drawing.Size(428, 265);
+            this.flpApplications.TabIndex = 6;
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(6, 6);
@@ -380,7 +398,6 @@
             this.button5.TabIndex = 3;
             this.button5.Text = "Installed";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // tabPage1
             // 
@@ -486,22 +503,6 @@
             this.button8.Text = "Out of Date";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(6, 138);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 60);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Recommended";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // flpApplications
-            // 
-            this.flpApplications.Location = new System.Drawing.Point(3, 3);
-            this.flpApplications.Name = "flpApplications";
-            this.flpApplications.Size = new System.Drawing.Size(428, 265);
-            this.flpApplications.TabIndex = 6;
-            // 
             // frmAFBasic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -563,5 +564,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.FlowLayoutPanel flpApplications;
+        private System.Windows.Forms.Timer timer1;
     }
 }
