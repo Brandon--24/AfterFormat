@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfApplicationInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ApplicationInfo>
+    <Name>CCleaner</Name>
+    <InstalledVersion>5.01</InstalledVersion>
+    <LatestVersion>5.01.5075</LatestVersion>
+    <Url>http://www.downloadx64.com/ccleaner/</Url>
+    <DownloadLink>http://download.piriform.com/ccsetup501.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>TeamViewer</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>10.0.36897</LatestVersion>
+    <Url>http://www.downloadx64.com/teamviewer/</Url>
+    <DownloadLink>http://download.teamviewer.com/download/TeamViewer_Setup.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Notepad++</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>6.7</LatestVersion>
+    <Url>http://www.downloadx64.com/notepad/</Url>
+    <DownloadLink>http://download.tuxfamily.org/notepadplus/6.7/npp.6.7.Installer.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Adobe Reader</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>11.0.10</LatestVersion>
+    <Url>http://www.downloadx64.com/adobe-reader/</Url>
+    <DownloadLink>http://ardownload.adobe.com/pub/adobe/reader/win/11.x/11.0.10/en_US/AdbeRdr11010_en_US.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Skype</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>7.0.0.102</LatestVersion>
+    <Url>http://www.downloadx64.com/skype/</Url>
+    <DownloadLink>http://download.skype.com/msi/SkypeSetup_7.0.0.102.msi</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Avast Antivirus Free / Premier / Pro</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>2015.10.0.2208</LatestVersion>
+    <Url>http://www.downloadx64.com/avast-antivirus/</Url>
+    <DownloadLink>http://files.avast.com/iavs9x/avast_free_antivirus_setup.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>uTorrent</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>3.4.2.37248</LatestVersion>
+    <Url>http://www.downloadx64.com/utorrent/</Url>
+    <DownloadLink>http://download-new.utorrent.com/endpoint/utorrent/os/windows/track/stable/</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Dropbox</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>3.0.4</LatestVersion>
+    <Url>http://www.downloadx64.com/dropbox/</Url>
+    <DownloadLink>https://dl.dropboxusercontent.com/u/17/Dropbox%203.0.4.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Internet Download Manager</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>6.21.17</LatestVersion>
+    <Url>http://www.downloadx64.com/internet-download-manager/</Url>
+    <DownloadLink>http://shareit1.element5.com/download.html?productid=212127&amp;affiliateid=200146979&amp;ftp=http%3A%2F%2Fmirror2.internetdownloadmanager.com%2Fidman621.exe&amp;sessionid=2728482036</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>WinRAR (64-bit)</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>5.20</LatestVersion>
+    <Url>http://www.downloadx64.com/winrar-64-bit/</Url>
+    <DownloadLink>http://rarlab.com/rar/wrar520.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>WinRAR (32-bit)</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>5.20</LatestVersion>
+    <Url>http://www.downloadx64.com/winrar-32-bit/</Url>
+    <DownloadLink>http://www.rarlab.com/rar/wrar520.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Google Chrome (64-bit)</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>39.0.2171.95</LatestVersion>
+    <Url>http://www.downloadx64.com/google-chrome-64-bit/</Url>
+    <DownloadLink>https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Mozilla Firefox</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>34.0.5</LatestVersion>
+    <Url>http://www.downloadx64.com/firefox-32-bit/</Url>
+    <DownloadLink>http://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-aurora/firefox-36.0a2.en-US.win32.installer.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>Opera</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>26.0.1656.60</LatestVersion>
+    <Url>http://www.downloadx64.com/opera-32-bit/</Url>
+    <DownloadLink>http://get.geo.opera.com/pub/opera/desktop/26.0.1656.60/win/Opera_26.0.1656.60_Setup.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>VLC Media Player (64-bit)</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>2.1.5</LatestVersion>
+    <Url>http://www.downloadx64.com/vlc-media-player/</Url>
+    <DownloadLink>http://downloads.videolan.org/pub/videolan/vlc/2.1.5/win64/vlc-2.1.5-win64.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+  <ApplicationInfo>
+    <Name>VLC Media Player (32-bit)</Name>
+    <InstalledVersion>0</InstalledVersion>
+    <LatestVersion>2.1.5</LatestVersion>
+    <Url>http://www.downloadx64.com/vlc-32-bit/</Url>
+    <DownloadLink>http://mirror.vodien.com/videolan/vlc/2.1.5/win32/vlc-2.1.5-win32.exe</DownloadLink>
+    <DownloadLocation />
+    <RegKeyLocation />
+    <IsInstalled>false</IsInstalled>
+    <IsDownloaded>false</IsDownloaded>
+  </ApplicationInfo>
+</ArrayOfApplicationInfo>

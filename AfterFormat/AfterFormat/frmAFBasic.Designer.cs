@@ -34,6 +34,8 @@
             this.tbVIsuals = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.pnlVisual = new System.Windows.Forms.Panel();
+            this.btnSmrDefault = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.cbRegStaCPan = new System.Windows.Forms.CheckBox();
@@ -46,6 +48,7 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.cbRegStaUser = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,41 +64,38 @@
             this.button6 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.btnSmrDefault = new System.Windows.Forms.Button();
             this.tbSettings = new System.Windows.Forms.TabPage();
-            this.gbGeneralSettings = new System.Windows.Forms.GroupBox();
-            this.cbAutoStart = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.gbApplicationsSettings = new System.Windows.Forms.GroupBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button11 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.gbGeneralSettings = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.cbAutoStart = new System.Windows.Forms.CheckBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tbMain.SuspendLayout();
             this.tbVIsuals.SuspendLayout();
             this.pnlVisual.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tbApplications.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tbFolders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tbSettings.SuspendLayout();
-            this.gbGeneralSettings.SuspendLayout();
             this.gbApplicationsSettings.SuspendLayout();
+            this.gbGeneralSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -168,6 +168,37 @@
             this.pnlVisual.Name = "pnlVisual";
             this.pnlVisual.Size = new System.Drawing.Size(434, 271);
             this.pnlVisual.TabIndex = 1;
+            // 
+            // btnSmrDefault
+            // 
+            this.btnSmrDefault.Location = new System.Drawing.Point(210, 115);
+            this.btnSmrDefault.Name = "btnSmrDefault";
+            this.btnSmrDefault.Size = new System.Drawing.Size(100, 23);
+            this.btnSmrDefault.TabIndex = 11;
+            this.btnSmrDefault.Text = "Set to Default";
+            this.btnSmrDefault.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(260, 70);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(50, 20);
+            this.numericUpDown1.TabIndex = 10;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // checkBox3
             // 
@@ -314,6 +345,18 @@
             this.checkBox1.Text = "Enabled";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.Location = new System.Drawing.Point(8, 50);
+            this.label4.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 15);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Start Menu - Main";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -411,6 +454,7 @@
             // 
             // flpApplications
             // 
+            this.flpApplications.AutoScroll = true;
             this.flpApplications.Location = new System.Drawing.Point(3, 3);
             this.flpApplications.Name = "flpApplications";
             this.flpApplications.Size = new System.Drawing.Size(428, 265);
@@ -464,49 +508,6 @@
             this.button8.Text = "Style 1";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(8, 50);
-            this.label4.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Start Menu - Main";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(260, 70);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(50, 20);
-            this.numericUpDown1.TabIndex = 10;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // btnSmrDefault
-            // 
-            this.btnSmrDefault.Location = new System.Drawing.Point(210, 115);
-            this.btnSmrDefault.Name = "btnSmrDefault";
-            this.btnSmrDefault.Size = new System.Drawing.Size(100, 23);
-            this.btnSmrDefault.TabIndex = 11;
-            this.btnSmrDefault.Text = "Set to Default";
-            this.btnSmrDefault.UseVisualStyleBackColor = true;
-            // 
             // tbSettings
             // 
             this.tbSettings.AutoScroll = true;
@@ -519,83 +520,6 @@
             this.tbSettings.TabIndex = 3;
             this.tbSettings.Text = "Settings";
             this.tbSettings.UseVisualStyleBackColor = true;
-            // 
-            // gbGeneralSettings
-            // 
-            this.gbGeneralSettings.Controls.Add(this.radioButton3);
-            this.gbGeneralSettings.Controls.Add(this.radioButton2);
-            this.gbGeneralSettings.Controls.Add(this.radioButton1);
-            this.gbGeneralSettings.Controls.Add(this.label5);
-            this.gbGeneralSettings.Controls.Add(this.checkBox7);
-            this.gbGeneralSettings.Controls.Add(this.cbAutoStart);
-            this.gbGeneralSettings.Location = new System.Drawing.Point(6, 6);
-            this.gbGeneralSettings.Name = "gbGeneralSettings";
-            this.gbGeneralSettings.Size = new System.Drawing.Size(525, 123);
-            this.gbGeneralSettings.TabIndex = 0;
-            this.gbGeneralSettings.TabStop = false;
-            this.gbGeneralSettings.Text = "General Settings";
-            // 
-            // cbAutoStart
-            // 
-            this.cbAutoStart.AutoSize = true;
-            this.cbAutoStart.Location = new System.Drawing.Point(6, 19);
-            this.cbAutoStart.Name = "cbAutoStart";
-            this.cbAutoStart.Size = new System.Drawing.Size(210, 17);
-            this.cbAutoStart.TabIndex = 0;
-            this.cbAutoStart.Text = "Run After Format when computer starts";
-            this.cbAutoStart.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(6, 42);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(237, 17);
-            this.checkBox7.TabIndex = 0;
-            this.checkBox7.Text = "Check for After Format updates automatically";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 67);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Start After Format on:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(119, 65);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Visual Options";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(210, 65);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 17);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Applications";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(298, 65);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(59, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Folders";
-            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // gbApplicationsSettings
             // 
@@ -618,39 +542,68 @@
             this.gbApplicationsSettings.TabStop = false;
             this.gbApplicationsSettings.Text = "Applications Settings";
             // 
-            // checkBox9
+            // label8
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(6, 19);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(298, 17);
-            this.checkBox9.TabIndex = 0;
-            this.checkBox9.Text = "Check for software updates as soon as After Format starts";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 112);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Download software in:";
             // 
-            // checkBox8
+            // button11
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Checked = true;
-            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox8.Location = new System.Drawing.Point(6, 42);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(238, 17);
-            this.checkBox8.TabIndex = 1;
-            this.checkBox8.Text = "Make use of Silent Installers (when available)";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.button11.Location = new System.Drawing.Point(381, 179);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(30, 20);
+            this.button11.TabIndex = 4;
+            this.button11.Text = "...";
+            this.button11.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // button10
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Checked = true;
-            this.radioButton4.Location = new System.Drawing.Point(43, 65);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(195, 17);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Use Windows default install location";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.button10.Location = new System.Drawing.Point(381, 87);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(30, 20);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "...";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(174, 179);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(201, 20);
+            this.textBox2.TabIndex = 3;
+            this.textBox2.Text = "D:\\Downloads\\";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(174, 87);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(201, 20);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "D:\\Applications\\";
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(43, 180);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(103, 17);
+            this.radioButton8.TabIndex = 2;
+            this.radioButton8.Text = "Custom location:";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(43, 157);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(350, 17);
+            this.radioButton7.TabIndex = 2;
+            this.radioButton7.Text = "Temporary folder (will be removed when temporary files are removed.)";
+            this.radioButton7.UseVisualStyleBackColor = true;
             // 
             // radioButton5
             // 
@@ -661,23 +614,6 @@
             this.radioButton5.TabIndex = 2;
             this.radioButton5.Text = "Use Custom location:";
             this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(174, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "D:\\Applications\\";
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(381, 87);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(30, 20);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "...";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // radioButton6
             // 
@@ -691,51 +627,116 @@
             this.radioButton6.Text = "Windows default download location";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // radioButton4
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(43, 157);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(350, 17);
-            this.radioButton7.TabIndex = 2;
-            this.radioButton7.Text = "Temporary folder (will be removed when temporary files are removed.)";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Checked = true;
+            this.radioButton4.Location = new System.Drawing.Point(43, 65);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(195, 17);
+            this.radioButton4.TabIndex = 2;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Use Windows default install location";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // checkBox8
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(43, 180);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(103, 17);
-            this.radioButton8.TabIndex = 2;
-            this.radioButton8.Text = "Custom location:";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Checked = true;
+            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox8.Location = new System.Drawing.Point(6, 42);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(238, 17);
+            this.checkBox8.TabIndex = 1;
+            this.checkBox8.Text = "Make use of Silent Installers (when available)";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // checkBox9
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "D:\\Downloads\\";
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Location = new System.Drawing.Point(6, 19);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(298, 17);
+            this.checkBox9.TabIndex = 0;
+            this.checkBox9.Text = "Check for software updates as soon as After Format starts";
+            this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // gbGeneralSettings
             // 
-            this.button11.Location = new System.Drawing.Point(381, 179);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(30, 20);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "...";
-            this.button11.UseVisualStyleBackColor = true;
+            this.gbGeneralSettings.Controls.Add(this.radioButton3);
+            this.gbGeneralSettings.Controls.Add(this.radioButton2);
+            this.gbGeneralSettings.Controls.Add(this.radioButton1);
+            this.gbGeneralSettings.Controls.Add(this.label5);
+            this.gbGeneralSettings.Controls.Add(this.checkBox7);
+            this.gbGeneralSettings.Controls.Add(this.cbAutoStart);
+            this.gbGeneralSettings.Location = new System.Drawing.Point(6, 6);
+            this.gbGeneralSettings.Name = "gbGeneralSettings";
+            this.gbGeneralSettings.Size = new System.Drawing.Size(525, 123);
+            this.gbGeneralSettings.TabIndex = 0;
+            this.gbGeneralSettings.TabStop = false;
+            this.gbGeneralSettings.Text = "General Settings";
             // 
-            // label8
+            // radioButton3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 112);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Download software in:";
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(298, 65);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(59, 17);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Folders";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(210, 65);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(82, 17);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Applications";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(119, 65);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(92, 17);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Visual Options";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Start After Format on:";
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(6, 42);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(237, 17);
+            this.checkBox7.TabIndex = 0;
+            this.checkBox7.Text = "Check for After Format updates automatically";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // cbAutoStart
+            // 
+            this.cbAutoStart.AutoSize = true;
+            this.cbAutoStart.Location = new System.Drawing.Point(6, 19);
+            this.cbAutoStart.Name = "cbAutoStart";
+            this.cbAutoStart.Size = new System.Drawing.Size(210, 17);
+            this.cbAutoStart.TabIndex = 0;
+            this.cbAutoStart.Text = "Run After Format when computer starts";
+            this.cbAutoStart.UseVisualStyleBackColor = true;
             // 
             // frmAFBasic
             // 
@@ -750,15 +751,15 @@
             this.tbVIsuals.ResumeLayout(false);
             this.pnlVisual.ResumeLayout(false);
             this.pnlVisual.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tbApplications.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tbFolders.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tbSettings.ResumeLayout(false);
-            this.gbGeneralSettings.ResumeLayout(false);
-            this.gbGeneralSettings.PerformLayout();
             this.gbApplicationsSettings.ResumeLayout(false);
             this.gbApplicationsSettings.PerformLayout();
+            this.gbGeneralSettings.ResumeLayout(false);
+            this.gbGeneralSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }

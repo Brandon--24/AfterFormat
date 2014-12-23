@@ -142,11 +142,25 @@ namespace AfterFormat
 
             }
             //<meta content="CCleaner 5.00.5050" abp="38" itemprop="softwareVersion">
+            
+            string appName = Name;
+            appName = appName.Replace("(64-bit)", "");
+            appName = appName.Replace("(32-bit)", "");
+            appName = appName.Trim();
+
             string fileVersion = "";
             fileVersion = responseFromServer;
-            fileVersion = fileVersion.Remove(0, fileVersion.LastIndexOf("content=\"" + Name));
-            fileVersion = fileVersion.Replace("content=\"" + Name, "");
+            fileVersion = fileVersion.Remove(0, fileVersion.LastIndexOf("content=\"" + appName));
+            fileVersion = fileVersion.Replace("content=\"" + appName, "");
+            fileVersion = fileVersion.Replace("64-bit", "");
+            fileVersion = fileVersion.Replace("32-bit", "");
+            fileVersion = fileVersion.Replace("(Offline Installer)", "");
+            fileVersion = fileVersion.Replace(" Build ", ".");
             fileVersion = fileVersion.Remove(fileVersion.LastIndexOf("\""));
+            if (fileVersion.Contains("Stable")) //for firefox
+            {
+                fileVersion = fileVersion.Substring(0, fileVersion.IndexOf("Stable"));
+            }
             fileVersion = fileVersion.Trim();
 
             // Clean up the streams and the response.
@@ -177,7 +191,7 @@ namespace AfterFormat
                 string thisLine = reader.ReadLine();
 
                 //getting link
-                if (thisLine.Contains("href=\"http://") && thisLine.Contains(".exe"))
+                if ((thisLine.Contains("href=\"http://") || thisLine.Contains("href=\"https://")) && (thisLine.Contains(".exe") || thisLine.Contains(".msi")))
                 {
                     responseFromServer = thisLine;
                     break;
@@ -188,7 +202,9 @@ namespace AfterFormat
             downLink = responseFromServer;
             downLink = downLink.Remove(0, downLink.LastIndexOf("href=\""));
             downLink = downLink.Replace("href=\"", "");
-            downLink = downLink.Remove(downLink.LastIndexOf("\" title="));
+            //downLink = downLink.Remove(downLink.LastIndexOf("\""));
+            downLink = downLink.Remove(downLink.IndexOf("\""));
+            //downLink = downLink.Remove(downLink.LastIndexOf("\" title="));
             downLink = downLink.Trim();
 
             // Clean up the streams and the response.
