@@ -28,7 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Applications");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Dropbox");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("OneDrive");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Cloud", new System.Windows.Forms.TreeNode[] {
+            treeNode24,
+            treeNode25});
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Direct");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Torrent Files");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Torrents", new System.Windows.Forms.TreeNode[] {
+            treeNode28});
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Downloads", new System.Windows.Forms.TreeNode[] {
+            treeNode27,
+            treeNode29});
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Games");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Personal");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Partition", new System.Windows.Forms.TreeNode[] {
+            treeNode23,
+            treeNode26,
+            treeNode30,
+            treeNode31,
+            treeNode32});
             this.button1 = new System.Windows.Forms.Button();
             this.tbMain = new System.Windows.Forms.TabControl();
             this.tbVIsuals = new System.Windows.Forms.TabPage();
@@ -36,18 +56,18 @@
             this.pnlVisual = new System.Windows.Forms.Panel();
             this.btnSmrDefault = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.cbRegExtSAllTray = new System.Windows.Forms.CheckBox();
+            this.cbRegExpSExt = new System.Windows.Forms.CheckBox();
             this.cbRegStaCPan = new System.Windows.Forms.CheckBox();
             this.cbRegStaNetw = new System.Windows.Forms.CheckBox();
             this.cbRegStaComp = new System.Windows.Forms.CheckBox();
             this.cbRegStaFavo = new System.Windows.Forms.CheckBox();
             this.cbRegStaDocs = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.cbRegStaHide = new System.Windows.Forms.CheckBox();
+            this.cbRegStaSmlIco = new System.Windows.Forms.CheckBox();
+            this.cbRegRecUsed = new System.Windows.Forms.CheckBox();
             this.cbRegStaUser = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbUACEnabled = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,7 +105,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.cbAutoStart = new System.Windows.Forms.CheckBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tvStyle1 = new System.Windows.Forms.TreeView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnApply = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tbMain.SuspendLayout();
             this.tbVIsuals.SuspendLayout();
             this.pnlVisual.SuspendLayout();
@@ -93,6 +117,7 @@
             this.tbApplications.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tbFolders.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tbSettings.SuspendLayout();
             this.gbApplicationsSettings.SuspendLayout();
             this.gbGeneralSettings.SuspendLayout();
@@ -100,6 +125,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(6, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 60);
@@ -109,6 +135,9 @@
             // 
             // tbMain
             // 
+            this.tbMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbMain.Controls.Add(this.tbVIsuals);
             this.tbMain.Controls.Add(this.tbApplications);
             this.tbMain.Controls.Add(this.tbFolders);
@@ -116,7 +145,7 @@
             this.tbMain.Location = new System.Drawing.Point(12, 12);
             this.tbMain.Name = "tbMain";
             this.tbMain.SelectedIndex = 0;
-            this.tbMain.Size = new System.Drawing.Size(560, 338);
+            this.tbMain.Size = new System.Drawing.Size(560, 418);
             this.tbMain.TabIndex = 1;
             // 
             // tbVIsuals
@@ -129,14 +158,15 @@
             this.tbVIsuals.Location = new System.Drawing.Point(4, 22);
             this.tbVIsuals.Name = "tbVIsuals";
             this.tbVIsuals.Padding = new System.Windows.Forms.Padding(3);
-            this.tbVIsuals.Size = new System.Drawing.Size(552, 312);
+            this.tbVIsuals.Size = new System.Drawing.Size(552, 392);
             this.tbVIsuals.TabIndex = 0;
             this.tbVIsuals.Text = "Visual Options";
             this.tbVIsuals.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(396, 283);
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Location = new System.Drawing.Point(396, 363);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(150, 23);
             this.button4.TabIndex = 2;
@@ -145,28 +175,31 @@
             // 
             // pnlVisual
             // 
+            this.pnlVisual.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlVisual.AutoScroll = true;
             this.pnlVisual.Controls.Add(this.btnSmrDefault);
             this.pnlVisual.Controls.Add(this.numericUpDown1);
-            this.pnlVisual.Controls.Add(this.checkBox3);
-            this.pnlVisual.Controls.Add(this.checkBox4);
+            this.pnlVisual.Controls.Add(this.cbRegExtSAllTray);
+            this.pnlVisual.Controls.Add(this.cbRegExpSExt);
             this.pnlVisual.Controls.Add(this.cbRegStaCPan);
             this.pnlVisual.Controls.Add(this.cbRegStaNetw);
             this.pnlVisual.Controls.Add(this.cbRegStaComp);
             this.pnlVisual.Controls.Add(this.cbRegStaFavo);
             this.pnlVisual.Controls.Add(this.cbRegStaDocs);
-            this.pnlVisual.Controls.Add(this.checkBox2);
-            this.pnlVisual.Controls.Add(this.checkBox6);
-            this.pnlVisual.Controls.Add(this.checkBox5);
+            this.pnlVisual.Controls.Add(this.cbRegStaHide);
+            this.pnlVisual.Controls.Add(this.cbRegStaSmlIco);
+            this.pnlVisual.Controls.Add(this.cbRegRecUsed);
             this.pnlVisual.Controls.Add(this.cbRegStaUser);
-            this.pnlVisual.Controls.Add(this.checkBox1);
+            this.pnlVisual.Controls.Add(this.cbUACEnabled);
             this.pnlVisual.Controls.Add(this.label4);
             this.pnlVisual.Controls.Add(this.label2);
             this.pnlVisual.Controls.Add(this.label3);
             this.pnlVisual.Controls.Add(this.label1);
             this.pnlVisual.Location = new System.Drawing.Point(112, 6);
             this.pnlVisual.Name = "pnlVisual";
-            this.pnlVisual.Size = new System.Drawing.Size(434, 271);
+            this.pnlVisual.Size = new System.Drawing.Size(434, 351);
             this.pnlVisual.TabIndex = 1;
             // 
             // btnSmrDefault
@@ -200,29 +233,29 @@
             0,
             0});
             // 
-            // checkBox3
+            // cbRegExtSAllTray
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(20, 329);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox3.Size = new System.Drawing.Size(142, 19);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.Text = "Show all Tray Icons";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbRegExtSAllTray.AutoSize = true;
+            this.cbRegExtSAllTray.Location = new System.Drawing.Point(20, 329);
+            this.cbRegExtSAllTray.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.cbRegExtSAllTray.Name = "cbRegExtSAllTray";
+            this.cbRegExtSAllTray.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegExtSAllTray.Size = new System.Drawing.Size(142, 19);
+            this.cbRegExtSAllTray.TabIndex = 9;
+            this.cbRegExtSAllTray.Text = "Show all Tray Icons";
+            this.cbRegExtSAllTray.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // cbRegExpSExt
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(20, 306);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox4.Size = new System.Drawing.Size(147, 19);
-            this.checkBox4.TabIndex = 8;
-            this.checkBox4.Text = "Show File Extentions";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.cbRegExpSExt.AutoSize = true;
+            this.cbRegExpSExt.Location = new System.Drawing.Point(20, 306);
+            this.cbRegExpSExt.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.cbRegExpSExt.Name = "cbRegExpSExt";
+            this.cbRegExpSExt.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegExpSExt.Size = new System.Drawing.Size(147, 19);
+            this.cbRegExpSExt.TabIndex = 8;
+            this.cbRegExpSExt.Text = "Show File Extentions";
+            this.cbRegExpSExt.UseVisualStyleBackColor = true;
             // 
             // cbRegStaCPan
             // 
@@ -284,42 +317,42 @@
             this.cbRegStaDocs.Text = "Show Documents";
             this.cbRegStaDocs.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // cbRegStaHide
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(20, 261);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox2.Size = new System.Drawing.Size(131, 19);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Hide all others";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbRegStaHide.AutoSize = true;
+            this.cbRegStaHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbRegStaHide.Location = new System.Drawing.Point(20, 261);
+            this.cbRegStaHide.Margin = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegStaHide.Name = "cbRegStaHide";
+            this.cbRegStaHide.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegStaHide.Size = new System.Drawing.Size(131, 19);
+            this.cbRegStaHide.TabIndex = 7;
+            this.cbRegStaHide.Text = "Hide all others";
+            this.cbRegStaHide.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // cbRegStaSmlIco
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(20, 91);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox6.Size = new System.Drawing.Size(125, 19);
-            this.checkBox6.TabIndex = 7;
-            this.checkBox6.Text = "Use Small Icons";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.cbRegStaSmlIco.AutoSize = true;
+            this.cbRegStaSmlIco.Location = new System.Drawing.Point(20, 91);
+            this.cbRegStaSmlIco.Margin = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegStaSmlIco.Name = "cbRegStaSmlIco";
+            this.cbRegStaSmlIco.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegStaSmlIco.Size = new System.Drawing.Size(125, 19);
+            this.cbRegStaSmlIco.TabIndex = 7;
+            this.cbRegStaSmlIco.Text = "Use Small Icons";
+            this.cbRegStaSmlIco.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // cbRegRecUsed
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(20, 70);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox5.Size = new System.Drawing.Size(209, 19);
-            this.checkBox5.TabIndex = 7;
-            this.checkBox5.Text = "Show Recently Used Applications";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.cbRegRecUsed.AutoSize = true;
+            this.cbRegRecUsed.Location = new System.Drawing.Point(20, 70);
+            this.cbRegRecUsed.Margin = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegRecUsed.Name = "cbRegRecUsed";
+            this.cbRegRecUsed.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbRegRecUsed.Size = new System.Drawing.Size(209, 19);
+            this.cbRegRecUsed.TabIndex = 7;
+            this.cbRegRecUsed.Text = "Show Recently Used Applications";
+            this.cbRegRecUsed.UseVisualStyleBackColor = true;
             // 
             // cbRegStaUser
             // 
@@ -333,17 +366,17 @@
             this.cbRegStaUser.Text = "Show User";
             this.cbRegStaUser.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // cbUACEnabled
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(20, 25);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
-            this.checkBox1.Size = new System.Drawing.Size(88, 19);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Enabled";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbUACEnabled.AutoSize = true;
+            this.cbUACEnabled.Location = new System.Drawing.Point(20, 25);
+            this.cbUACEnabled.Margin = new System.Windows.Forms.Padding(20, 2, 3, 2);
+            this.cbUACEnabled.Name = "cbUACEnabled";
+            this.cbUACEnabled.Padding = new System.Windows.Forms.Padding(20, 1, 3, 1);
+            this.cbUACEnabled.Size = new System.Drawing.Size(88, 19);
+            this.cbUACEnabled.TabIndex = 3;
+            this.cbUACEnabled.Text = "Enabled";
+            this.cbUACEnabled.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -395,6 +428,7 @@
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(6, 138);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 60);
@@ -404,6 +438,7 @@
             // 
             // button3
             // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(6, 72);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 60);
@@ -420,13 +455,14 @@
             this.tbApplications.Location = new System.Drawing.Point(4, 22);
             this.tbApplications.Name = "tbApplications";
             this.tbApplications.Padding = new System.Windows.Forms.Padding(3);
-            this.tbApplications.Size = new System.Drawing.Size(552, 312);
+            this.tbApplications.Size = new System.Drawing.Size(672, 392);
             this.tbApplications.TabIndex = 1;
             this.tbApplications.Text = "Applications";
             this.tbApplications.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Location = new System.Drawing.Point(6, 138);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 60);
@@ -436,6 +472,7 @@
             // 
             // button7
             // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Location = new System.Drawing.Point(6, 72);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 60);
@@ -445,23 +482,30 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.flpApplications);
             this.panel1.Location = new System.Drawing.Point(112, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(434, 271);
+            this.panel1.Size = new System.Drawing.Size(554, 351);
             this.panel1.TabIndex = 4;
             // 
             // flpApplications
             // 
+            this.flpApplications.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpApplications.AutoScroll = true;
             this.flpApplications.Location = new System.Drawing.Point(3, 3);
             this.flpApplications.Name = "flpApplications";
-            this.flpApplications.Size = new System.Drawing.Size(428, 265);
+            this.flpApplications.Size = new System.Drawing.Size(548, 345);
             this.flpApplications.TabIndex = 6;
             // 
             // button5
             // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(6, 6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 60);
@@ -477,13 +521,14 @@
             this.tbFolders.Location = new System.Drawing.Point(4, 22);
             this.tbFolders.Name = "tbFolders";
             this.tbFolders.Padding = new System.Windows.Forms.Padding(3);
-            this.tbFolders.Size = new System.Drawing.Size(552, 312);
+            this.tbFolders.Size = new System.Drawing.Size(672, 392);
             this.tbFolders.TabIndex = 2;
             this.tbFolders.Text = "Folders";
             this.tbFolders.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Location = new System.Drawing.Point(6, 72);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 60);
@@ -493,14 +538,23 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.btnApply);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.tvStyle1);
             this.panel2.Location = new System.Drawing.Point(112, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(434, 271);
+            this.panel2.Size = new System.Drawing.Size(554, 351);
             this.panel2.TabIndex = 7;
             // 
             // button8
             // 
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Location = new System.Drawing.Point(6, 6);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(100, 60);
@@ -516,7 +570,7 @@
             this.tbSettings.Location = new System.Drawing.Point(4, 22);
             this.tbSettings.Name = "tbSettings";
             this.tbSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tbSettings.Size = new System.Drawing.Size(552, 312);
+            this.tbSettings.Size = new System.Drawing.Size(672, 392);
             this.tbSettings.TabIndex = 3;
             this.tbSettings.Text = "Settings";
             this.tbSettings.UseVisualStyleBackColor = true;
@@ -738,11 +792,80 @@
             this.cbAutoStart.Text = "Run After Format when computer starts";
             this.cbAutoStart.UseVisualStyleBackColor = true;
             // 
+            // tvStyle1
+            // 
+            this.tvStyle1.Location = new System.Drawing.Point(11, 26);
+            this.tvStyle1.Name = "tvStyle1";
+            treeNode23.Name = "Applications";
+            treeNode23.Text = "Applications";
+            treeNode24.Name = "Dropbox";
+            treeNode24.Text = "Dropbox";
+            treeNode25.Name = "OneDrive";
+            treeNode25.Text = "OneDrive";
+            treeNode26.Name = "Cloud";
+            treeNode26.Text = "Cloud";
+            treeNode27.Name = "Direct";
+            treeNode27.Text = "Direct";
+            treeNode28.Name = "Torrent Files";
+            treeNode28.Text = "Torrent Files";
+            treeNode29.Name = "Torrents";
+            treeNode29.Text = "Torrents";
+            treeNode30.Name = "Downloads";
+            treeNode30.Text = "Downloads";
+            treeNode31.Name = "Games";
+            treeNode31.Text = "Games";
+            treeNode32.Name = "Personal";
+            treeNode32.Text = "Personal";
+            treeNode33.Name = "Root";
+            treeNode33.Text = "Partition";
+            this.tvStyle1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode33});
+            this.tvStyle1.Size = new System.Drawing.Size(200, 200);
+            this.tvStyle1.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(8, 4);
+            this.label7.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(91, 15);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Sample Style";
+            // 
+            // btnApply
+            // 
+            this.btnApply.Location = new System.Drawing.Point(331, 66);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(100, 23);
+            this.btnApply.TabIndex = 5;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(217, 42);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(214, 20);
+            this.textBox3.TabIndex = 6;
+            this.textBox3.Text = "D:/";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(217, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(114, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Path to apply the style:";
+            // 
             // frmAFBasic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 362);
+            this.ClientSize = new System.Drawing.Size(584, 442);
             this.Controls.Add(this.tbMain);
             this.Name = "frmAFBasic";
             this.Text = "After Format";
@@ -755,6 +878,8 @@
             this.tbApplications.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tbFolders.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tbSettings.ResumeLayout(false);
             this.gbApplicationsSettings.ResumeLayout(false);
             this.gbApplicationsSettings.PerformLayout();
@@ -774,7 +899,7 @@
         private System.Windows.Forms.TabPage tbApplications;
         private System.Windows.Forms.Panel pnlVisual;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbUACEnabled;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbRegStaCPan;
@@ -784,11 +909,11 @@
         private System.Windows.Forms.CheckBox cbRegStaDocs;
         private System.Windows.Forms.CheckBox cbRegStaUser;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox cbRegExtSAllTray;
+        private System.Windows.Forms.CheckBox cbRegExpSExt;
+        private System.Windows.Forms.CheckBox cbRegStaHide;
+        private System.Windows.Forms.CheckBox cbRegRecUsed;
+        private System.Windows.Forms.CheckBox cbRegStaSmlIco;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
@@ -798,7 +923,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.FlowLayoutPanel flpApplications;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button btnSmrDefault;
@@ -823,5 +947,10 @@
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TreeView tvStyle1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnApply;
     }
 }
